@@ -14,6 +14,8 @@ public class OneListCommand implements Command {
 		BVO bvo = DAO.getOneList(b_idx);
 
 		// 조회수 업데이터
+		int result = DAO.getHitup(b_idx);
+		
 		System.out.println(bvo.getFile_name());
 		// 내용 가져오기
 		// 수정과 삭제를 위해서 session 저장

@@ -54,4 +54,11 @@ public class DAO {
 		
 		return result;
 	}
+
+	public static int getHitup(String b_idx) {
+		int result = 0;
+		result = getSession().update("hitup",b_idx);
+		
+		return result;
+	}
 }

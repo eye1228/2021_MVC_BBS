@@ -25,4 +25,8 @@
 		update bbs_t set writer=#{writer}, subject=#{subject},content=#{content},file_name=#{file_name} where b_idx=#{b_idx}
 	</update>
 	
+	<update id="hitup" parameterType="com.ict.db.BVO">
+		update bbs_t set hit= hit + 1 where b_idx=#{b_idx}
+	</update>
+	
 </mapper>
