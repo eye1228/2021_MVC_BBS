@@ -29,4 +29,13 @@
 		update bbs_t set hit= hit + 1 where b_idx=#{b_idx}
 	</update>
 	
+	<!-- 댓글 -->
+	<select id="clist" parameterType="String" resultType="com.ict.db.CVO">
+		select * from comment_t where b_idx = #{b_idx}
+	</select>
+	
+	<insert id="comm_insert" parameterType="com.ict.db.CVO">
+		insert into comment_t values(comment_t_seq.nextval, null, #{content}, null, sysdate, #{b_idx})
+	</insert>
+	
 </mapper>

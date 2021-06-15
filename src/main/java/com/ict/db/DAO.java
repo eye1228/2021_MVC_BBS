@@ -61,4 +61,20 @@ public class DAO {
 		
 		return result;
 	}
+
+	public static List<CVO> getClist(String b_idx) {
+		List<CVO> clist = null;
+		 clist = getSession().selectList("clist", b_idx);
+		
+		return clist ;
+	}
+	
+	//댓글
+
+	public static int getComm_Insert(CVO cvo) {
+		int result = 0;
+		result = getSession().insert("comm_insert", cvo);
+		
+		return result;
+	}
 }

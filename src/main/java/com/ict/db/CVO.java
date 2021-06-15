@@ -1,7 +1,15 @@
 package com.ict.db;
 
 public class CVO {
-	String subject, writer, content, file_name, pwd, write_date, hit, c_idx;
+	String b_idx, subject, writer, content, file_name, pwd, write_date, hit, c_idx;
+
+	public String getB_idx() {
+		return b_idx;
+	}
+
+	public void setB_idx(String b_idx) {
+		this.b_idx = b_idx;
+	}
 
 	public String getWriter() {
 		return writer;

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ict.model.Comm_DelCommand;
+import com.ict.model.Comm_InsCommand;
 import com.ict.model.Command;
 import com.ict.model.DeleteCommand;
 import com.ict.model.Delete_okCommand;
@@ -53,6 +55,10 @@ public class MyController extends HttpServlet {
 			comm = new DeleteCommand();
 		}else if(cmd.equalsIgnoreCase("delete_ok")){
 			comm = new Delete_okCommand();
+		}else if(cmd.equalsIgnoreCase("comm_ins")){
+			comm = new Comm_InsCommand();
+		}else if(cmd.equalsIgnoreCase("comm_del")){
+			comm = new Comm_DelCommand();
 		}
 		
 		String path = comm.exec(request, response);
